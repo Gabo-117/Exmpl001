@@ -23,10 +23,10 @@ class Metodos_cadena
       cadena1 = gets.chomp
       print "Ingrese segunda cadena:"
       cadena2 = gets.chomp
-      if cadena1.length == cadena2.length
+      if cadena1.length == cadena2.length#verifica si las cadenas tienen la misma cantidad de caracteres
         print cadena1, " y ", cadena2, " tienen la misma cantidad de caracteres: ", cadena1.length
       else
-        if cadena1.length > cadena2.length
+        if cadena1.length > cadena2.length#veridica cual cadena tiene la mayor cantidad de caracteres
           print cadena1, " tiene ", cadena1.length, " caracteres"
         else
           print cadena2, " tiene ", cadena2.length, " caracteres"

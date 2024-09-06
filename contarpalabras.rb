@@ -7,6 +7,10 @@ class PalabraContador
   end
 
 
+  def actualizar_texto(nuevo_texto)
+    @texto = nuevo_texto
+  end
+
   def contar_palabras_repetidas
     # Dividir el texto en palabras usando el espacio como delimitador
     palabras = @texto.downcase.split(/\W+/) # Usamos expresión regular para separar por cualquier carácter no alfanumérico
@@ -18,9 +22,7 @@ class PalabraContador
     palabras.each do |palabra|
       conteo[palabra] += 1
     end
-
-    # Filtrar las palabras que se repiten más de una vez
-    conteo.select { |palabra, cantidad| cantidad > 1 }
+    conteo.select { |palabra, cantidad| cantidad = 1 }
   end
 end
 
@@ -28,7 +30,7 @@ texto = "Perro perro perro hola hola la la la si no no pelota pelota."
 contador = PalabraContador.new(texto)
 resultados = contador.contar_palabras_repetidas
 
-puts "Palabras repetidas:"
+puts "Palabras:"
 resultados.each do |palabra, cantidad|
   puts "#{palabra}: #{cantidad}"
 end
